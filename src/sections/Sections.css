@@ -48,6 +48,7 @@
   padding: 0.5rem 0;
   position: relative;
   transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-size: 18px;
 }
 
 .navbar-link:hover {
@@ -62,7 +63,7 @@
 }
 
 .register-btn {
-  font-size: 1rem;
+  font-size: 18px;
   letter-spacing: 0.5px;
   color: white;
   background: linear-gradient(
@@ -213,13 +214,13 @@
   }
 }
 .hero-text {
-  font-size: 1.125rem;
+  font-size: 20px;
   text-align: left;
   margin-top: 0.6rem;
   max-width: 800px;
   margin-left: 0;
   margin-right: auto;
-  color: #e9f4f1bb;
+  color: #c3c6c3bb;
 }
 
 .hero-content-container {
@@ -254,10 +255,10 @@
 }
 /* About Section */
 .about-section {
-  background: #1a1a1a;
+  background: #010101;
   color: #ffffff;
   padding: 4rem 2rem;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .about-container {
@@ -279,7 +280,7 @@
 }
 
 .about-overview {
-  font-size: 0.875rem;
+  font-size: 16px;
   font-weight: 400;
   color: #9ca3af;
   letter-spacing: 2px;
@@ -288,7 +289,7 @@
 }
 
 .about-main-title {
-  font-size: 3.5rem;
+  font-size: 46px;
   font-weight: 500;
   line-height: 1.1;
   margin: 0;
@@ -339,7 +340,7 @@
 }
 
 .about-text {
-  font-size: 1rem;
+  font-size: 20px;
   line-height: 1.6;
   color: #d1d5db;
   margin: 0;

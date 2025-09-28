@@ -61,8 +61,9 @@ const EventSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Stay updated with our latest workshops, announcements, and success
-          stories from the IEEE Xtreme community.
+          Stay updated with our latest workshops, announcements, success
+          stories, events, achievements, and insights from the IEEE Xtreme
+          community.
         </motion.p>
 
         <div className="timeline-container">

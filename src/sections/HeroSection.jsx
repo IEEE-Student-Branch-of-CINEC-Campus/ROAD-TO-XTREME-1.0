@@ -133,11 +133,10 @@ const HeroSection = () => {
           </h2>
 
           <p className="hero-text">
-            Road to Xtreme is a series of preparation sessions and training
-            programs leading up to IEEEXtreme 19.0, the global 24-hour coding
-            hackathon. It helps students sharpen their coding skills, gain
-            real-world problem-solving experience, and get ready to compete on
-            an international stage.
+            Road to Xtreme is a series of training sessions for IEEEXtreme 19.0,
+            the 24-hour global coding hackathon. It helps students improve
+            coding skills, practice problem-solving, and prepare to compete
+            internationally.
           </p>
         </div>
       </section>

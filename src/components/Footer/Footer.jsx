@@ -2,6 +2,7 @@ import React from "react";
 import "./Footerc.css";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo from "../../assets/logo.png";
+import logo2 from "../../assets/CINEC IEEE SB B&W logo.png";
 
 const Footer = () => {
   const scrollToSection = (e, id) => {
@@ -41,7 +42,7 @@ const Footer = () => {
     <footer id="footer" className="footer">
       <div className="footer-top">
         <img src={logo} alt="Xtreme Logo" className="footer-logo" />
-
+        <img src={logo2} alt="Student branch Logo" className="footer-logo" />
         <ul className="footer-nav">
           <li>
             <a href="#home" onClick={(e) => scrollToSection(e, "home")}>
