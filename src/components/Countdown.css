@@ -18,7 +18,7 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   color: #59e7e5;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.5rem;
+  font-size: 20px;
   width: fit-content; /* Changed from fixed 42rem to fit-content for better responsiveness */
   max-width: 42rem; /* Add max-width to prevent it from getting too wide */
   animation: colorPulse 2s ease-in-out infinite;
@@ -46,7 +46,7 @@
 
 @media (max-width: 768px) {
   .countdown {
-    font-size: 0.9rem;
+    font-size: 20px;
     padding: 10px 12px;
     width: fit-content; /* Responsive width */
   }
