@@ -3,17 +3,17 @@ import "../../src/index.css";
 
 const aboutItems = [
   {
-    text: "A 24-hours coding marathon designed to test your logical thinking, problem-solving, and coding skills."
+    text: "Boost your logical thinking, problem-solving, and coding skills.",
   },
   {
-    text: "Acts as a preparatory platform for the IEEExtreme 19.0 Global Hackathon, inspiring students to compete at the international grounds."
+    text: "Prepare for the 24-hour IEEEXtreme 19.0 coding challenge and compete globally.",
   },
   {
-    text: "Fully Online Format – inclusive participation from universities across Sri Lanka."
+    text: "Level up through practical sessions, coding practice, and expert mentorship.",
   },
   {
-    text: "Encourages teamwork, innovation, and collaboration among undergraduates."
-  }
+    text: "Collaborate, innovate, and grow with fellow undergraduates.",
+  },
 ];
 
 const About = () => {
@@ -25,16 +25,17 @@ const About = () => {
           <div className="about-title-section">
             <p className="about-overview">OVERVIEW</p>
             <h1 className="about-main-title">
-              About<br />
+              About
+              <br />
               <span className="about-highlight">Road to Xtreme</span>
             </h1>
           </div>
-          <div className="about-description">
+          {/* <div className="about-description">
             <p>
               Road to xtreme is an island-wide, inter-university coding hackathon 
               organized by Computer Society Chapter - IEEE Student Branch of CINEC campus
             </p>
-          </div>
+          </div> */}
         </div>
 
         {/* Content Grid */}
