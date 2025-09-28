@@ -8,10 +8,10 @@
   scroll-margin-top: 80px;
   background: linear-gradient(
     180deg,
-    #0f1419 0%,
-    #0d1a1d 25%,
-    #0a1f1a 50%,
-    #0d1a1d 70%,
+    #0e1317 0%,
+    #0a1315 25%,
+    #081814 50%,
+    #080f11 70%,
     #0f1419 100%
   );
 }
@@ -42,7 +42,7 @@
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2rem;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  font-size: 26px;
+  font-size: 20px;
 }
 
 /* Timeline layout */
@@ -116,7 +116,7 @@
 /* Date highlight box */
 .timeline-card .event-date {
   align-self: flex-start;
-  background: linear-gradient(135deg, #44af8c, #216897);
+  background: linear-gradient(90deg, #408763, #2d7ac3);
   padding: 0.5rem 1rem;
   border-radius: 8px;
   font-size: 1.8rem;
