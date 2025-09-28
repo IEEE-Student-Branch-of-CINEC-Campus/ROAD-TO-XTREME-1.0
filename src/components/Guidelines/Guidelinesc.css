@@ -1,0 +1,62 @@
+.guidelines {
+  background: #0d0d0d;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.guidelines-title {
+  font-size: 46px;
+  margin-bottom: 30px;
+  font-family: "Orbitron", sans-serif;
+  background: linear-gradient(90deg, #4ade80 30%, #e2eced 50%, #06b6d4 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.guidelines-grid {
+  margin: 0 150px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .guidelines-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.guideline-card {
+  background: #11111171;
+  border: 1px solid transparent;
+  padding: 20px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.guideline-card {
+  border: 2px solid transparent;
+  background-image: linear-gradient(#111, #111),
+    linear-gradient(90deg, #64f4ac, #3da2ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.guideline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(61, 162, 255, 0.4);
+}
+.guideline-card h3 {
+  font-size: 24px;
+}
+.guideline-card .guideline-icon {
+  font-size: 46px;
+}
