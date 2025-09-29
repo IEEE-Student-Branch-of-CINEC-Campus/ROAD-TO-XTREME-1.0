@@ -90,9 +90,12 @@ const Countdown = () => {
     <section className="countdown-section">
       <div className="countdown">
         <p className="countdown-label">Counting: </p>
-        <p className="countdown-value">{timeLeft.days} Days</p> :
-        <p className="countdown-value">{timeLeft.hours} Hours</p> :
-        <p className="countdown-value">{timeLeft.minutes} Minutes</p> :
+        <p className="countdown-value">{timeLeft.days} Days</p>
+        <span className="countdown-separator">:</span>
+        <p className="countdown-value">{timeLeft.hours} Hours</p>
+        <span className="countdown-separator">:</span>
+        <p className="countdown-value">{timeLeft.minutes} Minutes</p>
+        <span className="countdown-separator">:</span>
         <p className="countdown-value">{timeLeft.seconds} Seconds</p>
       </div>
     </section>

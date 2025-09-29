@@ -11,7 +11,7 @@ function App() {
         <HeroSection />
         <AboutSection />
         <EventsSection />
-        <GuidelineSection/>
+        <GuidelineSection />
         <FooterSection />
       </main>
     </div>

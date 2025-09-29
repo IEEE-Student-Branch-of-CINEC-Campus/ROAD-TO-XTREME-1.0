@@ -1,5 +1,5 @@
-import "../../src/sections/Sections.css";
-import "../../src/index.css";
+import "./Sections.css";
+import "../index.css";
 
 const aboutItems = [
   {

@@ -2,70 +2,50 @@ import React from "react";
 import "./Footerc.css";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo from "../../assets/logo.png";
-import logo2 from "../../assets/CINEC IEEE SB B&W logo.png";
+import cinecLogo from "../../assets/CINEC IEEE SB B&W logo.png";
+import { smoothScrollTo } from "../../utils/smoothScroll";
 
 const Footer = () => {
-  const scrollToSection = (e, id) => {
+  const handleNavClick = (e, id) => {
     e.preventDefault();
-
-    const target = document.getElementById(id);
-    if (!target) return;
-
-    const targetPosition =
-      target.getBoundingClientRect().top + window.pageYOffset;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    const duration = 800;
-    let startTime = null;
-
-    const animation = (currentTime) => {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-
-      const run = ease(timeElapsed, startPosition, distance, duration);
-      window.scrollTo(0, run);
-
-      if (timeElapsed < duration) requestAnimationFrame(animation);
-    };
-
-    const ease = (t, b, c, d) => {
-      t /= d / 2;
-      if (t < 1) return (c / 2) * t * t + b;
-      t--;
-      return (-c / 2) * (t * (t - 2) - 1) + b;
-    };
-
-    requestAnimationFrame(animation);
+    smoothScrollTo(id);
   };
 
   return (
     <footer id="footer" className="footer">
       <div className="footer-top">
-        <img src={logo} alt="Xtreme Logo" className="footer-logo" />
-        <img src={logo2} alt="Student branch Logo" className="footer-logo" />
+        <div className="footer-logos">
+          <img src={logo} alt="IEEE Xtreme Logo" className="footer-logo" />
+          <img
+            src={cinecLogo}
+            alt="CINEC IEEE Student Branch Logo"
+            className="footer-logo cinec-logo"
+          />
+        </div>
+
         <ul className="footer-nav">
           <li>
-            <a href="#home" onClick={(e) => scrollToSection(e, "home")}>
+            <a href="#home" onClick={(e) => handleNavClick(e, "home")}>
               Home
             </a>
           </li>
           <li>
-            <a href="#about" onClick={(e) => scrollToSection(e, "about")}>
+            <a href="#about" onClick={(e) => handleNavClick(e, "about")}>
               About
             </a>
           </li>
           <li>
-            <a href="#event" onClick={(e) => scrollToSection(e, "event")}>
+            <a href="#event" onClick={(e) => handleNavClick(e, "event")}>
               Timeline
             </a>
           </li>
           <li>
-            <a href="#guide" onClick={(e) => scrollToSection(e, "guide")}>
+            <a href="#guide" onClick={(e) => handleNavClick(e, "guide")}>
               Guide
             </a>
           </li>
           {/* <li>
-            <a href="#guide" onClick={(e) => scrollToSection(e, "guide")}>
+            <a href="#guide" onClick={(e) => handleNavClick(e, "guide")}>
               Rules
             </a>
           </li> */}

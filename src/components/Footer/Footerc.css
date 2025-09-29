@@ -16,7 +16,18 @@
   padding-bottom: 20px;
 }
 
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .footer-logo {
+  height: 85px;
+  width: auto;
+}
+
+.cinec-logo {
   height: 85px;
   width: auto;
 }
@@ -72,4 +83,159 @@
   font-size: 14px;
   border-top: 1px solid #333;
   padding-top: 10px;
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 3rem 2rem;
+  }
+
+  .footer-bottom {
+    padding: 0 1rem;
+  }
+
+  .footer-logos {
+    gap: 15px;
+  }
+
+  .footer-logo {
+    height: 75px;
+  }
+
+  .cinec-logo {
+    height: 60px;
+  }
+
+  .footer-nav {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2.5rem 1rem;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-logos {
+    gap: 10px;
+  }
+
+  .footer-logo {
+    height: 65px;
+  }
+
+  .cinec-logo {
+    height: 60px;
+  }
+
+  .footer-nav {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-nav li a {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .social-icons {
+    order: -1;
+  }
+
+  .social-icons a {
+    font-size: 1.1rem;
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 0.75rem;
+  }
+
+  .footer-logos {
+    gap: 8px;
+  }
+
+  .footer-logo {
+    height: 55px;
+  }
+
+  .cinec-logo {
+    height: 60px;
+  }
+
+  .footer-nav {
+    gap: 1rem;
+  }
+
+  .footer-nav li a {
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+
+  .social-icons a {
+    font-size: 1rem;
+    margin: 0 0.4rem;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .footer-logos {
+    gap: 6px;
+  }
+
+  .footer-logo {
+    height: 50px;
+  }
+
+  .cinec-logo {
+    height: 55px;
+  }
+
+  .footer-nav {
+    gap: 0.75rem;
+  }
+
+  .footer-nav li a {
+    font-size: 0.75rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+  }
+
+  .social-icons a {
+    font-size: 0.9rem;
+    margin: 0 0.3rem;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+  }
 }
