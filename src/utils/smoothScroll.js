@@ -6,15 +6,21 @@ export const smoothScrollTo = (targetId, offset = 80) => {
   if (isScrolling) return;
 
   const target = document.getElementById(targetId);
-  if (!target) return;
+  if (!target) {
+    console.warn(`Element with id "${targetId}" not found`);
+    return;
+  }
 
   isScrolling = true;
 
+  // Calculate target position with proper offset for fixed navbar
   const targetPosition =
     target.getBoundingClientRect().top + window.pageYOffset - offset;
   const startPosition = window.pageYOffset;
   const distance = targetPosition - startPosition;
-  const duration = Math.min(Math.abs(distance) * 0.5, 1000); // Dynamic duration based on distance
+
+  // Ensure minimum duration for smooth animation
+  const duration = Math.max(Math.min(Math.abs(distance) * 0.5, 1000), 300);
   let startTime = null;
 
   // Optimized easing function
@@ -33,6 +39,8 @@ export const smoothScrollTo = (targetId, offset = 80) => {
       requestAnimationFrame(animation);
     } else {
       isScrolling = false;
+      // Ensure we're exactly at the target position
+      window.scrollTo(0, targetPosition);
     }
   };
 

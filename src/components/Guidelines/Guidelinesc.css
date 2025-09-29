@@ -28,6 +28,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  scroll-margin-top: 80px;
 }
 
 /* Enhanced Background Effects with #27a296dd & Blue */
