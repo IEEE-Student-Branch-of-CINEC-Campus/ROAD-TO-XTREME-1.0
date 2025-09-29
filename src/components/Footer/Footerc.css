@@ -73,3 +73,75 @@
   border-top: 1px solid #333;
   padding-top: 10px;
 }
+
+/* ========================
+   Responsive Footer
+======================== */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 40px 60px; /* reduce side padding */
+  }
+
+  .footer-nav {
+    gap: 25px; /* smaller gaps */
+  }
+
+  .footer-bottom {
+    padding: 0 20px;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 15px;
+  }
+
+  .footer-logo {
+    height: 65px; /* smaller logo */
+  }
+
+  .footer-nav {
+    gap: 10px;
+  }
+
+  .social-icons a {
+    font-size: 18px; /* slightly smaller icons */
+    margin: 0 8px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+  }
+}

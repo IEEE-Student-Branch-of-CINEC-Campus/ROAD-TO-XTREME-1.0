@@ -166,7 +166,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .event-section {
     background: linear-gradient(180deg, #0a1f1a 0%, #0d1a1d 50%, #0f1419 100%);
   }
@@ -189,5 +189,120 @@
   .timeline-dot {
     left: 20px;
     transform: translateX(-50%);
+  }
+} */
+/* ========================
+   Responsive Timeline
+======================== */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .event-title {
+    font-size: 38px;
+  }
+
+  .event-subtitle {
+    font-size: 18px;
+  }
+
+  .timeline-card {
+    width: 60%;
+    padding: 1rem;
+  }
+
+  .timeline-card .event-date {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .timeline-card .event-main {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobiles (≤768px) */
+@media (max-width: 768px) {
+  .event-section {
+    padding: 30px 15px;
+    background: linear-gradient(180deg, #0a1f1a 0%, #0d1a1d 50%, #0f1419 100%);
+  }
+
+  .event-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .event-subtitle {
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-card {
+    width: 85%;
+    margin: 0 auto 2rem auto;
+  }
+
+  .timeline-card .event-date {
+    font-size: 1.3rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .timeline-card .event-main {
+    font-size: 1.1rem;
+  }
+
+  .timeline-card .event-desc {
+    font-size: 0.95rem;
+  }
+
+  /* Shift timeline line & dots to left */
+  .timeline-line {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-dot {
+    left: 25px;
+    transform: translateX(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .event-title {
+    font-size: 24px;
+  }
+
+  .event-subtitle {
+    font-size: 14px;
+  }
+
+  .timeline-card {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+  }
+
+  .timeline-card .event-date {
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+  }
+
+  .timeline-card .event-main {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .timeline-card .event-desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .timeline-dot {
+    width: 1rem;
+    height: 1rem;
   }
 }
