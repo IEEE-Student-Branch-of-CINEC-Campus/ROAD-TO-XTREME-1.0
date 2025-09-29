@@ -87,18 +87,27 @@ const Countdown = () => {
   }, []);
 
   return (
-    <section className="countdown-section">
-      <div className="countdown">
-        <p className="countdown-label">Counting: </p>
-        <p className="countdown-value">{timeLeft.days} Days</p>
-        <span className="countdown-separator">:</span>
-        <p className="countdown-value">{timeLeft.hours} Hours</p>
-        <span className="countdown-separator">:</span>
-        <p className="countdown-value">{timeLeft.minutes} Minutes</p>
-        <span className="countdown-separator">:</span>
-        <p className="countdown-value">{timeLeft.seconds} Seconds</p>
+    <div className="countdown-modern">
+      <div className="countdown-item">
+        <div className="countdown-number">{timeLeft.days}</div>
+        <div className="countdown-label">Days</div>
       </div>
-    </section>
+      <div className="countdown-separator">:</div>
+      <div className="countdown-item">
+        <div className="countdown-number">{timeLeft.hours}</div>
+        <div className="countdown-label">Hours</div>
+      </div>
+      <div className="countdown-separator">:</div>
+      <div className="countdown-item">
+        <div className="countdown-number">{timeLeft.minutes}</div>
+        <div className="countdown-label">Minutes</div>
+      </div>
+      <div className="countdown-separator">:</div>
+      <div className="countdown-item">
+        <div className="countdown-number">{timeLeft.seconds}</div>
+        <div className="countdown-label">Seconds</div>
+      </div>
+    </div>
   );
 };
 
