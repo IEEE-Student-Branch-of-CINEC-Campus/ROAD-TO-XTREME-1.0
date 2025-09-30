@@ -1,53 +1,39 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Countdown from "../components/Countdown";
 import logo from "../assets/logo.png";
 import heroImage from "../assets/hero.png";
-import "../../src/sections/Sections.css";
-import "../../src/index.css";
+import { smoothScrollTo } from "../utils/smoothScroll";
+import "./Sections.css";
+import "../index.css";
 
 const HeroSection = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const links = document.querySelectorAll(".navbar-link");
 
-    const scrollToSection = (e, id) => {
+    const handleNavClick = (e) => {
       e.preventDefault();
-      const target = document.getElementById(id);
-      if (!target) return;
-
-      const targetPosition =
-        target.getBoundingClientRect().top + window.pageYOffset;
-      const startPosition = window.pageYOffset;
-      const distance = targetPosition - startPosition;
-      const duration = 800;
-      let startTime = null;
-
-      const ease = (t, b, c, d) => {
-        t /= d / 2;
-        if (t < 1) return (c / 2) * t * t + b;
-        t--;
-        return (-c / 2) * (t * (t - 2) - 1) + b;
-      };
-
-      const animation = (currentTime) => {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-      };
-
-      requestAnimationFrame(animation);
+      const targetId = e.target.getAttribute("href").substring(1);
+      smoothScrollTo(targetId);
+      setIsMobileMenuOpen(false); // Close mobile menu after clicking
     };
 
     links.forEach((link) => {
-      const handleClick = (e) => {
-        const targetId = link.getAttribute("href").substring(1);
-        scrollToSection(e, targetId);
-      };
-      link.addEventListener("click", handleClick);
-      return () => link.removeEventListener("click", handleClick);
+      link.addEventListener("click", handleNavClick);
     });
+
+    // Cleanup
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", handleNavClick);
+      });
+    };
   }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <section
@@ -92,16 +78,6 @@ const HeroSection = () => {
                 Guide
               </a>
             </li>
-            {/* <li>
-              <a href="#guide" className="navbar-link">
-                Rules
-              </a>
-            </li> */}
-            {/* <li>
-              <a href="#footer" className="navbar-link">
-                Contact
-              </a>
-            </li> */}
           </ul>
 
           <div className="navbar-auth">
@@ -114,6 +90,45 @@ const HeroSection = () => {
               Register Now
             </button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="mobile-menu-btn"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+          >
+            <span className={`hamburger ${isMobileMenuOpen ? "active" : ""}`}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={`mobile-menu ${isMobileMenuOpen ? "active" : ""}`}>
+          <ul className="mobile-menu-list">
+            <li>
+              <a href="#home" className="navbar-link">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="navbar-link">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#event" className="navbar-link">
+                Timeline
+              </a>
+            </li>
+            <li>
+              <a href="#guide" className="navbar-link">
+                Guide
+              </a>
+            </li>
+          </ul>
         </div>
       </nav>
 
@@ -133,11 +148,21 @@ const HeroSection = () => {
           </h2>
 
           <p className="hero-text">
-            Road to Xtreme is a series of training sessions for IEEEXtreme 19.0,
-            the 24-hour global coding hackathon. It helps students improve
-            coding skills, practice problem-solving, and prepare to compete
-            internationally.
+            <b>Road to Xtreme</b> is a series of training sessions for{" "}
+            <b>IEEEXtreme 19.0</b>, the<br></br> <b>24-hour </b>global coding
+            hackathon. It helps students improve coding skills, practice
+            problem-solving, and prepare to compete internationally.
           </p>
+
+          {/* Mobile Register Button */}
+          <button
+            className="mobile-hero-register-btn"
+            onClick={() =>
+              (window.location.href = "https://forms.gle/xePL4VVHoFAdALtt7")
+            }
+          >
+            Register Now
+          </button>
         </div>
       </section>
     </section>

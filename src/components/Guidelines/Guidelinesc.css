@@ -1,64 +1,490 @@
+/* Modern Guidelines Section with #27a296dd, Black, Blue Gradient */
 .guidelines {
-  background: #0d0d0d;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(39, 162, 150, 0.15) 0%,
+      rgba(39, 162, 150, 0.08) 25%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(59, 130, 246, 0.12) 0%,
+      rgba(59, 130, 246, 0.06) 30%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      #0a0a0a 0%,
+      #0f1419 40%,
+      #000000 70%,
+      #000000 100%
+    );
   color: white;
-  padding: 40px 20px;
+  padding: 80px 20px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-margin-top: 80px;
 }
 
+/* Enhanced Background Effects with #27a296dd & Blue */
+.guidelines::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      ellipse at 30% 40%,
+      rgba(39, 162, 150, 0.08) 0%,
+      rgba(39, 162, 150, 0.04) 20%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 70% 60%,
+      rgba(59, 130, 246, 0.06) 0%,
+      rgba(59, 130, 246, 0.03) 25%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 50% 10%,
+      rgba(39, 162, 150, 0.04) 0%,
+      rgba(39, 162, 150, 0.02) 30%,
+      transparent 60%
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.guidelines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(89, 231, 189, 0.02) 25%,
+    transparent 50%,
+    rgba(79, 195, 247, 0.02) 75%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Compact Title Styling */
 .guidelines-title {
-  font-size: 46px;
-  margin-bottom: 30px;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
   font-family: "Orbitron", sans-serif;
+  font-weight: 700;
   background: linear-gradient(90deg, #4ade80 30%, #e2eced 50%, #06b6d4 60%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 2;
 }
+
+/* Compact Subtitle */
+.guidelines-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Compact Grid Layout - 2 cards per row with reduced width */
 .guidelines-grid {
-  margin: 0 150px;
+  max-width: 800px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-@media screen and (max-width: 600px) {
-  .guidelines-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.guideline-card {
-  /* background: #11111171; */
-  background-image: linear-gradient(#111, #111),
-    linear-gradient(90deg, #64f4ac, #3da2ff);
-  border: 1px solid transparent;
-  padding: 20px;
-  border-radius: 16px;
-  transition: all 0.3s ease;
+  gap: 2rem;
   position: relative;
-  height: 300px;
+  z-index: 2;
+}
+
+/* Modern Black Guideline Card Design */
+.guideline-card {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(39, 162, 150, 0.3);
+  border-radius: 16px;
+  padding: 1.8rem 1.2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(39, 162, 150, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  opacity: 0.9;
 }
 
-.guideline-card {
-  border: 3px solid transparent;
-  background-image: linear-gradient(#111, #111),
-    linear-gradient(90deg, #64f4ac, #3da2ff);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+/* Enhanced shimmer effect with highlight color */
+.guideline-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(39, 162, 150, 0.2),
+    transparent
+  );
+  transition: all 0.6s ease;
+  z-index: 1;
+}
+
+.guideline-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(39, 162, 150, 0.08) 0%,
+    rgba(59, 130, 246, 0.06) 50%,
+    rgba(39, 162, 150, 0.08) 100%
+  );
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 1;
 }
 
 .guideline-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(61, 162, 255, 0.4);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(39, 162, 150, 0.4),
+    0 0 60px rgba(39, 162, 150, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  border-color: rgba(39, 162, 150, 0.5);
+  opacity: 1;
 }
+
+.guideline-card:hover::before {
+  left: 100%;
+}
+
+.guideline-card:hover::after {
+  opacity: 1;
+}
+
+/* Modern Icon Styling with Highlight Color */
+.guideline-icon {
+  font-size: 2.5rem;
+  color: #27a296;
+  margin-bottom: 1rem;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 15px rgba(39, 162, 150, 0.4));
+}
+
+.guideline-card:hover .guideline-icon {
+  transform: scale(1.15) rotate(5deg);
+  color: #59e7bd;
+  filter: drop-shadow(0 0 25px rgba(39, 162, 150, 0.6));
+}
+
+/* Enhanced Typography for Larger Cards */
 .guideline-card h3 {
-  font-size: 24px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.5px;
 }
-.guideline-card .guideline-icon {
-  font-size: 46px;
+
+.guideline-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  font-weight: 300;
+}
+
+/* Modern Animation Classes */
+.guideline-card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.guideline-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.guideline-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.guideline-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.guideline-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modern Floating Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.guideline-card:nth-child(odd) {
+  animation: fadeInUp 0.6s ease forwards, float 6s ease-in-out infinite;
+}
+
+.guideline-card:nth-child(even) {
+  animation: fadeInUp 0.6s ease forwards, float 6s ease-in-out infinite 3s;
+}
+
+/* Modern Responsive Design */
+@media screen and (max-width: 1200px) {
+  .guidelines-grid {
+    max-width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .guideline-card {
+    height: 260px;
+    padding: 1.6rem 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .guidelines {
+    padding: 60px 20px;
+  }
+
+  .guidelines-title {
+    font-size: 2.2rem;
+  }
+
+  .guidelines-grid {
+    max-width: 600px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .guideline-card {
+    height: 240px;
+    padding: 1.4rem 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .guidelines {
+    padding: 50px 15px;
+    min-height: auto;
+  }
+
+  .guidelines-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .guidelines-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .guidelines-grid {
+    max-width: 90%;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 0 auto;
+  }
+
+  .guideline-card {
+    height: 200px;
+    padding: 1.2rem 0.8rem;
+    max-width: 100%;
+  }
+
+  .guideline-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .guideline-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .guideline-icon {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .guidelines {
+    padding: 40px 10px;
+  }
+
+  .guidelines-grid {
+    max-width: 85%;
+    gap: 1.2rem;
+  }
+
+  .guideline-card {
+    height: 180px;
+    padding: 1rem 0.6rem;
+  }
+
+  .guideline-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .guideline-card p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .guideline-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .guidelines-section {
+    padding: 3rem 2rem;
+  }
+
+  .guidelines-title {
+    font-size: 2.2rem;
+  }
+
+  .guidelines-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .guidelines-grid {
+    gap: 2rem;
+  }
+
+  .guideline-card {
+    padding: 1.5rem;
+    min-height: 200px;
+  }
+
+  .guideline-icon {
+    font-size: 2rem;
+  }
+
+  .guideline-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .guideline-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .guidelines-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .guidelines-title {
+    font-size: 2rem;
+  }
+
+  .guidelines-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .guidelines-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .guideline-card {
+    padding: 1.25rem;
+    min-height: 180px;
+  }
+
+  .guideline-icon {
+    font-size: 1.8rem;
+  }
+
+  .guideline-card h3 {
+    font-size: 1rem;
+  }
+
+  .guideline-card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .guidelines-section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .guidelines-title {
+    font-size: 1.6rem;
+  }
+
+  .guidelines-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .guideline-card {
+    padding: 0.75rem;
+    min-height: 140px;
+  }
+
+  .guideline-icon {
+    font-size: 1.3rem;
+  }
+
+  .guideline-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .guideline-card p {
+    font-size: 0.75rem;
+  }
 }

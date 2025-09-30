@@ -1,10 +1,24 @@
 .footer {
-  background: #0f0f0f;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(39, 162, 150, 0.08) 0%,
+      rgba(39, 162, 150, 0.04) 25%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(59, 130, 246, 0.06) 0%,
+      rgba(59, 130, 246, 0.03) 30%,
+      transparent 60%
+    ),
+    linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
   color: #ccc;
   padding: 50px 115px;
   font-family: Arial, sans-serif;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
 
 .footer-top {
@@ -12,11 +26,24 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid rgba(39, 162, 150, 0.2);
   padding-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .footer-logo {
+  height: 85px;
+  width: auto;
+}
+
+.cinec-logo {
   height: 85px;
   width: auto;
 }
@@ -25,10 +52,10 @@
   list-style: none;
   display: flex;
   gap: 40px;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .footer-nav li a {
@@ -39,7 +66,7 @@
 }
 
 .footer-nav li a:hover {
-  color: #00c3ff;
+  color: #27a296;
 }
 
 .footer-bottom {
@@ -49,6 +76,8 @@
   margin-top: 20px;
   flex-wrap: wrap;
   padding: 0 45px;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-bottom p {
@@ -63,13 +92,170 @@
 }
 
 .social-icons a:hover {
-  color: #00c3ff;
+  color: #27a296;
 }
 
 .footer-copy {
   text-align: center;
   margin-top: 20px;
   font-size: 14px;
-  border-top: 1px solid #333;
+  border-top: 1px solid rgba(39, 162, 150, 0.2);
   padding-top: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 3rem 2rem;
+  }
+
+  .footer-bottom {
+    padding: 0 1rem;
+  }
+
+  .footer-logos {
+    gap: 15px;
+  }
+
+  .footer-logo {
+    height: 75px;
+  }
+
+  .cinec-logo {
+    height: 60px;
+  }
+
+  .footer-nav {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2.5rem 1rem;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-logos {
+    gap: 10px;
+  }
+
+  .footer-logo {
+    height: 65px;
+  }
+
+  .cinec-logo {
+    height: 60px;
+  }
+
+  .footer-nav {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-nav li a {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .social-icons {
+    order: -1;
+  }
+
+  .social-icons a {
+    font-size: 1.1rem;
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 0.75rem;
+  }
+
+  .footer-logos {
+    gap: 8px;
+  }
+
+  .footer-logo {
+    height: 55px;
+  }
+
+  .cinec-logo {
+    height: 60px;
+  }
+
+  .footer-nav {
+    gap: 1rem;
+  }
+
+  .footer-nav li a {
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+
+  .social-icons a {
+    font-size: 1rem;
+    margin: 0 0.4rem;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .footer-logos {
+    gap: 6px;
+  }
+
+  .footer-logo {
+    height: 50px;
+  }
+
+  .cinec-logo {
+    height: 55px;
+  }
+
+  .footer-nav {
+    gap: 0.75rem;
+  }
+
+  .footer-nav li a {
+    font-size: 0.75rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+  }
+
+  .social-icons a {
+    font-size: 0.9rem;
+    margin: 0 0.3rem;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+  }
 }

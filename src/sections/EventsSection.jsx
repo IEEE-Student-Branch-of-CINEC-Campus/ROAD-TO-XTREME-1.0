@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import "./EventSection.css";
+import {
+  initTimelineScrollAnimations,
+  initTimelineProgress,
+} from "../utils/scrollAnimations";
 
 const timelineEvents = [
   {
@@ -43,6 +48,18 @@ const timelineEvents = [
 ];
 
 const EventSection = () => {
+  useEffect(() => {
+    // Initialize scroll-triggered animations
+    const cleanupTimelineAnimations = initTimelineScrollAnimations();
+    const cleanupTimelineProgress = initTimelineProgress();
+
+    // Cleanup on unmount
+    return () => {
+      if (cleanupTimelineAnimations) cleanupTimelineAnimations();
+      if (cleanupTimelineProgress) cleanupTimelineProgress();
+    };
+  }, []);
+
   return (
     <section id="event" className="event-section">
       <div className="event-content">
