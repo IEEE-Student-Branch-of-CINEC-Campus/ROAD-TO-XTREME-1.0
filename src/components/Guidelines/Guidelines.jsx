@@ -43,16 +43,16 @@ function Guidelines() {
           </p>
         </div>
 
-        {/* <div className="guideline-card">
+        <div className="guideline-card">
           <FaRegEdit className="guideline-icon" />
           <h3>Registration</h3>
           <p>
             All teams must register before the closing date. Make sure your team
             name matches your HackerRank account handle!
           </p>
-        </div> */}
+        </div>
 
-        <div className="guideline-card">
+        {/* <div className="guideline-card">
           <FaRegEdit className="guideline-icon" />
           <h3>Registration</h3>
           <p>All teams must register before the closing date!</p>
@@ -64,7 +64,7 @@ function Guidelines() {
           >
             Register Now
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
