@@ -51,17 +51,18 @@ function Guidelines() {
             name matches your HackerRank account handle!
           </p>
         </div> */}
+
         <div className="guideline-card">
           <FaRegEdit className="guideline-icon" />
           <h3>Registration</h3>
           <p>All teams must register before the closing date!</p>
           <a
-            href="https://forms.gle/Xouxhz5iBhTpPrQz5"
-            className="registration-link"
+            href="https://forms.gle/1Rn8uFR2AytCgpvH9"
             target="_blank"
             rel="noopener noreferrer"
+            className="guideline-link"
           >
-            Register Here
+            Register Now
           </a>
         </div>
       </div>
