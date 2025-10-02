@@ -15,31 +15,31 @@ const timelineEvents = [
   },
   {
     main: "Competitive Programming & Importance of DSA",
-    date: "September 04 - 7:00 PM",
+    date: "4th October 2025 - 7:00 PM",
     description:
       "Explore the world of competitive programming, understand the importance of DSA, and see how algorithmic problem-solving impacts the real world.",
   },
   {
-    main: "AI Task Submission",
-    date: "October 06, 2025",
+    main: "AI Task Machine Learning in Algorithm Improvement and Problem-Solving",
+    date: "6th October 2025 - 7:00 PM",
     description:
       "Submit your AI task with a well-prepared prompt and learn best practices for crafting effective AI solutions.",
   },
   {
     main: "Training Weeks: Trial Coding Sessions",
-    date: "October 13 – 19, 2025",
+    date: "11 – 18 October 2025",
     description:
       "Hands-on coding sessions simulating competition conditions to help participants experience the contest environment, tackle different problem levels, and assess readiness for the actual IEEEXtreme challenge.",
   },
   {
     main: "IEEEXtreme Awareness Session",
-    date: "October 18, 2025",
+    date: "18th October 2025 - 7:00 PM",
     description:
       "An engaging session to raise awareness about key concepts, tools, and techniques to prepare participants for upcoming challenges.",
   },
   {
     main: "IEEE Xtreme Global Hackathon – Campus Hosting",
-    date: "October 25 2025",
+    date: " 25th October 2025",
 
     venue: "CINEC Campus – Zenith Lecture Hall",
     description:
