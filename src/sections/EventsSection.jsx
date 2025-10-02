@@ -9,19 +9,19 @@ import {
 const timelineEvents = [
   {
     main: "Registration Opening",
-    date: "September 30",
+    date: "30th September 2025",
     description:
       "Participants can sign up and form their teams as registration opens for all eligible students ready to embark on this exciting coding journey.",
   },
   {
     main: "Competitive Programming & Importance of DSA",
-    date: "4th October 2025 - 7:00 PM",
+    date: "4th October - 7:00 PM",
     description:
       "Explore the world of competitive programming, understand the importance of DSA, and see how algorithmic problem-solving impacts the real world.",
   },
   {
-    main: "AI Task Machine Learning in Algorithm Improvement and Problem-Solving",
-    date: "6th October 2025 - 7:00 PM",
+    main: "AI Task Machine Learning in Algorithm Improvement & Problem-Solving",
+    date: "6th October - 7:00 PM",
     description:
       "Submit your AI task with a well-prepared prompt and learn best practices for crafting effective AI solutions.",
   },
@@ -33,7 +33,7 @@ const timelineEvents = [
   },
   {
     main: "IEEEXtreme Awareness Session",
-    date: "18th October 2025 - 7:00 PM",
+    date: "18th October - 7:00 PM",
     description:
       "An engaging session to raise awareness about key concepts, tools, and techniques to prepare participants for upcoming challenges.",
   },
